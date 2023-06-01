@@ -6,7 +6,7 @@ export const Header = styled.header`
 
   align-items: center;
   justify-content: space-around;
-  background: #4b2a99;
+  background: #7b68ee;
   height: 50px;
   width: 100%;
   padding: 10px;

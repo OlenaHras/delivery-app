@@ -1,13 +1,5 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin: 0 auto;
-  padding-left: 25px;
-  /* grid-template-columns: 1 2; */
-`;
 export const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,7 +14,7 @@ export const CardWrapper = styled.div`
     transform: translateY(-5px);
   }
 `;
-export const AddButton = styled.button`
+export const RemoveButton = styled.button`
   background-color: #f0ffff;
   border: 2px solid #00ffff;
   border-radius: 25px;
@@ -36,4 +28,16 @@ export const AddButton = styled.button`
     border: 2px solid #766a90;
     color: #ebd8ff;
   }
+`;
+
+export const ImgWrapper = styled.div`
+  width: 180px;
+  height: 100px;
+  object-fit: contain;
+`;
+
+export const Img = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 `;

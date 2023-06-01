@@ -1,13 +1,14 @@
 import { NavLink } from 'react-router-dom';
 
 import { Header } from './AppBar.styled';
+import logo from './logo.png';
 // import logo from '../../assets/images/Logo.png';
 const AppBar = () => {
   return (
     <Header>
-      {/* <NavLink to="/">
-        <img src={logo} alt="logo" />
-      </NavLink> */}
+      <NavLink to="/">
+        <img src={logo} alt="logo" width="50px" height="50px" />
+      </NavLink>
 
       <NavLink
         to="/"

@@ -29,3 +29,15 @@ export const AddButton = styled.button`
     color: #ebd8ff;
   }
 `;
+
+export const ImgWrapper = styled.div`
+  width: 180px;
+  height: 100px;
+  object-fit: contain;
+`;
+
+export const Img = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+`;
