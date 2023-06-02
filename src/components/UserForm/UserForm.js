@@ -1,10 +1,9 @@
-// import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { TextField, Button, Stack, Box, Typography } from '@mui/material';
 import { Grid } from '@mui/material';
 import { FormWrapper } from './UserForm.styled';
 import { useState } from 'react';
 
-const UserForm = () => {
+const UserForm = ({ handleOrderButton }) => {
   const [user, setUser] = useState({});
 
   const handleRegistration = e => {
@@ -16,7 +15,7 @@ const UserForm = () => {
       phone: form.elements.phone.value,
       city: form.elements.city.value,
     });
-    console.log(user.name);
+    handleOrderButton(user);
     form.reset();
   };
   return (
@@ -86,7 +85,6 @@ const UserForm = () => {
               type="submit"
               variant="contained"
               color="primary"
-              //   endIcon={<ArrowRightAltIcon />}
               size="large"
             >
               Order

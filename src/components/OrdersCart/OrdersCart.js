@@ -3,10 +3,10 @@ import { OrdersWrapper, EmptyMsg } from './OrdersCart.styled';
 import OrderItem from '../OrderItem/OrderItem';
 import empty from './ampty.webp';
 
-const OrdersCart = () => {
+const OrdersCart = ({ user }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const savedOrders = JSON.parse(localStorage.getItem('orders'));
-  const [ordersList, setOrdersList] = useState(savedOrders ? savedOrders : {});
+  const [ordersList, setOrdersList] = useState(savedOrders ? savedOrders : []);
 
   useEffect(() => {
     ordersList.map(item => {
@@ -48,7 +48,7 @@ const OrdersCart = () => {
           </EmptyMsg>
         )}
       </OrdersWrapper>
-      {savedOrders.length > 0 && <p>TOTAL: {totalPrice} $</p>}
+      {<p>TOTAL: {totalPrice} $</p>}
     </>
   );
 };
