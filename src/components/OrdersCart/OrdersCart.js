@@ -8,11 +8,11 @@ let totalPrice = 0;
 const OrdersCart = () => {
   // const [totalPrice, setTotalPrice] = useState(0);
   const savedOrders = JSON.parse(localStorage.getItem('orders'));
-  // const [ordersList, setOrdersList] = useState(savedOrders ? savedOrders : {});
-  //   console.log(savedOrders);
+  const [ordersList, setOrdersList] = useState(savedOrders ? savedOrders : {});
   const handleButtonClick = item => {
     const newOrdersList = savedOrders.filter(meal => meal.id !== item.id);
-    // console.log(newOrdersList);
+
+    setOrdersList(newOrdersList);
     totalPrice -= Number(item.price);
     localStorage.setItem('orders', JSON.stringify(newOrdersList));
   };
@@ -20,8 +20,8 @@ const OrdersCart = () => {
   return (
     <>
       <OrdersWrapper>
-        {savedOrders.length > 0 ? (
-          savedOrders.map(item => {
+        {ordersList.length > 0 ? (
+          ordersList.map(item => {
             // console.log(Number(item.price));
             totalPrice += Number(item.price);
             // setTotalPrice(prevState => {
@@ -36,7 +36,7 @@ const OrdersCart = () => {
         ) : (
           <EmptyMsg>
             <p>There are no orders</p>
-            <img src={empty} alt="empty cart" />
+            <img src={empty} alt="empty cart" width="600" height="400" />
           </EmptyMsg>
         )}
       </OrdersWrapper>

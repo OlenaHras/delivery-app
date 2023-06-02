@@ -16,7 +16,7 @@ const UserForm = () => {
       phone: form.elements.phone.value,
       city: form.elements.city.value,
     });
-    // console.log(user);
+    console.log(user.name);
     form.reset();
   };
   return (

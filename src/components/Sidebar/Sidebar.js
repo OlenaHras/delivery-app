@@ -1,53 +1,61 @@
-import { useEffect, useState } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { getListOfShops } from '../../redux/operations';
-// import { getShops } from '../../redux/selectors';
-import useDeliveryService from '../../services/DeliveryService';
-import Spinner from '../Spinner/Spinner';
+// import { useEffect, useState } from 'react';
+
+// import useDeliveryService from '../../services/DeliveryService';
+// import Spinner from '../Spinner/Spinner';
 import ShopButton from '../ShopButton/ShopButton';
 import { Container } from './Sidebar.styled';
-import { addShops } from '../../redux/shopsSlice';
-const Sidebar = ({ onButtonClick }) => {
-  const [shopsList, setShopsList] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(false);
-  // const dispatch = useDispatch();
-  // const shops = useSelector(getShops);
-  const { getAllShops } = useDeliveryService();
 
-  useEffect(() => {
-    setError(false);
-    setIsLoading(true);
+const buttonStyle = { pointerEvents: 'none', opacity: 0.4 };
 
-    fetchData();
-    setIsLoading(false);
-  }, []);
+const Sidebar = ({ onButtonClick, shopsList, choosedShop }) => {
+  // const [shops, setShops] = useState([]);
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [error, setError] = useState(false);
+
+  // const { getAllShops } = useDeliveryService();
+
+  // useEffect(() => {
+  //   setError(false);
+  //   setIsLoading(true);
+
+  //   fetchData();
+  //   setIsLoading(false);
+  // }, []);
 
   const handleButtonClick = id => {
-    console.log(id);
+    // console.log(id);
     onButtonClick(id);
   };
-  const fetchData = async () => {
-    try {
-      setIsLoading(true);
-      await getAllShops().then(data => {
-        setShopsList(data);
-      });
-    } catch (error) {
-      setError('Error while loading data. Try again later.');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
+  // const fetchData = async () => {
+  //   try {
+  //     setIsLoading(true);
+  //     await getAllShops().then(data => {
+  //       setShopsList(data);
+  //     });
+  //   } catch (error) {
+  //     setError('Error while loading data. Try again later.');
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
+  // const isChhosedShop=
   return (
     <Container>
-      {isLoading && <Spinner />}
+      {/* {isLoading && <Spinner />} */}
       {shopsList.length > 0 &&
         shopsList.map(({ id, name }) => {
-          // console.log(name);
+          // if (choosedShop && id !== choosedShop) {
+          //   // style = { pointerEvents: 'none', opacity: 0.6 };
+          //   return;
+          // }
+          // style = {};
+          // console.log(choosedShop);
           return (
-            <li key={id} onClick={() => handleButtonClick(id)}>
+            <li
+              key={id}
+              onClick={() => handleButtonClick(id)}
+              style={choosedShop && choosedShop !== id ? buttonStyle : {}}
+            >
               <ShopButton item={name} />
             </li>
           );
