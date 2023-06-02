@@ -12,7 +12,7 @@ const MealItem = ({ item, handleButtonClick }) => {
   }, []);
   const onButtonClick = item => {
     handleButtonClick(item);
-    setIsSelected(true);
+    setIsSelected(prev => !prev);
     // setIsSelected(!isSelected);
   };
 
@@ -23,7 +23,10 @@ const MealItem = ({ item, handleButtonClick }) => {
       </ImgWrapper>
       <div>{item.title}</div>
       <div>{item.price} $</div>
-      <AddButton onClick={() => onButtonClick(item)}>
+      <AddButton
+        onClick={() => onButtonClick(item)}
+        style={{ backgroundColor: isSelected ? '#FA8072' : '' }}
+      >
         {isSelected ? 'added' : 'add to cart'}
       </AddButton>
     </CardWrapper>

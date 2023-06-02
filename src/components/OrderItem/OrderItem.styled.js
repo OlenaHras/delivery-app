@@ -9,14 +9,14 @@ export const CardWrapper = styled.div`
   align-items: center;
   padding: 25px;
   width: 180px;
-  height: 230px;
+  height: 255px;
   &:hover {
     transform: translateY(-5px);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 `;
 export const RemoveButton = styled.button`
-  background-color: #f0ffff;
+  background-color: #fa8072;
   border: 2px solid #00ffff;
   border-radius: 25px;
   padding: 10px;

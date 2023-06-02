@@ -50,7 +50,7 @@ const HomePage = () => {
   // };
   return (
     <>
-      {/* {isLoading && <Spinner />} */}
+      {isLoading && <Spinner />}
       {list.length === 0 ? (
         <Spinner />
       ) : (

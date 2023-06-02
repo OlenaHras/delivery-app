@@ -1,18 +1,28 @@
 import { useState } from 'react';
 
-import { CardWrapper, RemoveButton, ImgWrapper, Img } from './OrderItem.styled';
-import { Counter, CounterButton } from './OrderItem.styled';
-const OrderItem = ({ item, handleButtonClick }) => {
+import {
+  CardWrapper,
+  RemoveButton,
+  ImgWrapper,
+  Img,
+  Counter,
+  CounterButton,
+} from './OrderItem.styled';
+
+const OrderItem = ({ item, handleButtonClick, handleTotalCount }) => {
   let [count, setCount] = useState(1);
+
   let incCount = () => {
     if (count < 10) {
       setCount(Number(count) + 1);
     }
+    handleTotalCount(Number(item.price));
   };
   let decCount = () => {
     if (count > 0) {
       setCount(count - 1);
     }
+    handleTotalCount(Number(-item.price));
   };
   // let handleChange = e => {
   //   setCount(e.target.value);
