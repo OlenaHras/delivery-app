@@ -1,6 +1,3 @@
-import { Link, Outlet } from 'react-router-dom';
-import axios from 'axios';
-
 import { useEffect, useState } from 'react';
 
 import useDeliveryService from '../../services/DeliveryService';

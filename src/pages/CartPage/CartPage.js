@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import OrdersCart from '../../components/OrdersCart/OrdersCart';
 import UserForm from '../../components/UserForm/UserForm';
 import { Container } from './CartPage.styled';

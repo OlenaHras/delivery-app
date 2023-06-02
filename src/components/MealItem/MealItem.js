@@ -9,7 +9,7 @@ const MealItem = ({ item, handleButtonClick }) => {
   //   : null;
   useEffect(() => {
     setIsSelected(savedOrders.find(meal => meal.id === item.id) ? true : false);
-  }, []);
+  }, [item.id, savedOrders]);
   const onButtonClick = item => {
     handleButtonClick(item);
     setIsSelected(prev => !prev);
