@@ -2,6 +2,7 @@
   "name": "delivery-app",
   "version": "0.1.0",
   "private": false,
+    "homepage": "https://olenahras.github.io/delivery-app/",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
