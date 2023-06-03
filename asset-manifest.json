@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.6cba8669.css",
-    "main.js": "/static/js/main.1fda954a.js",
-    "static/js/367.27615db4.chunk.js": "/static/js/367.27615db4.chunk.js",
-    "static/js/555.fc40a91f.chunk.js": "/static/js/555.fc40a91f.chunk.js",
-    "static/js/778.cb1bd6be.chunk.js": "/static/js/778.cb1bd6be.chunk.js",
-    "static/js/322.4d23e434.chunk.js": "/static/js/322.4d23e434.chunk.js",
-    "static/media/logo.png": "/static/media/logo.1e0b9d2accd2b9efbede.png",
-    "static/media/error.gif": "/static/media/error.42292aa12b6bc303ce99.gif",
-    "static/media/ampty.webp": "/static/media/ampty.401ab2ffa96809c57006.webp",
-    "index.html": "/index.html",
-    "main.6cba8669.css.map": "/static/css/main.6cba8669.css.map",
-    "main.1fda954a.js.map": "/static/js/main.1fda954a.js.map",
-    "367.27615db4.chunk.js.map": "/static/js/367.27615db4.chunk.js.map",
-    "555.fc40a91f.chunk.js.map": "/static/js/555.fc40a91f.chunk.js.map",
-    "778.cb1bd6be.chunk.js.map": "/static/js/778.cb1bd6be.chunk.js.map",
-    "322.4d23e434.chunk.js.map": "/static/js/322.4d23e434.chunk.js.map"
+    "main.css": "/delivery-app/static/css/main.6cba8669.css",
+    "main.js": "/delivery-app/static/js/main.b78cd12d.js",
+    "static/js/367.27615db4.chunk.js": "/delivery-app/static/js/367.27615db4.chunk.js",
+    "static/js/555.fc40a91f.chunk.js": "/delivery-app/static/js/555.fc40a91f.chunk.js",
+    "static/js/778.cb1bd6be.chunk.js": "/delivery-app/static/js/778.cb1bd6be.chunk.js",
+    "static/js/322.4d23e434.chunk.js": "/delivery-app/static/js/322.4d23e434.chunk.js",
+    "static/media/logo.png": "/delivery-app/static/media/logo.1e0b9d2accd2b9efbede.png",
+    "static/media/error.gif": "/delivery-app/static/media/error.42292aa12b6bc303ce99.gif",
+    "static/media/ampty.webp": "/delivery-app/static/media/ampty.401ab2ffa96809c57006.webp",
+    "index.html": "/delivery-app/index.html",
+    "main.6cba8669.css.map": "/delivery-app/static/css/main.6cba8669.css.map",
+    "main.b78cd12d.js.map": "/delivery-app/static/js/main.b78cd12d.js.map",
+    "367.27615db4.chunk.js.map": "/delivery-app/static/js/367.27615db4.chunk.js.map",
+    "555.fc40a91f.chunk.js.map": "/delivery-app/static/js/555.fc40a91f.chunk.js.map",
+    "778.cb1bd6be.chunk.js.map": "/delivery-app/static/js/778.cb1bd6be.chunk.js.map",
+    "322.4d23e434.chunk.js.map": "/delivery-app/static/js/322.4d23e434.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6cba8669.css",
-    "static/js/main.1fda954a.js"
+    "static/js/main.b78cd12d.js"
   ]
 }
