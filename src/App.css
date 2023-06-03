@@ -1,10 +1,9 @@
 .App {
   text-align: center;
-  /* width: 100%; */
-  /* background-image: url('./bgImage.jpg'); */
-  /* background-color: 'rgba(52, 52, 52, 0.8)'; */
+  background-image: url('./bgImageOpacity.jpg');
   background-repeat: no-repeat;
   background-size:cover;
+  width: 100vw;
 }
 
 .App-logo {

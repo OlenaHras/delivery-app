@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const OrdersWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 25px;
   margin: 0 auto;
   height: fit-content;

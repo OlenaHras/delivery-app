@@ -16,7 +16,6 @@ const ListOfMeals = ({ shop, handleChoosedShop }) => {
     const isExist = listInCart.find(meal => meal.id === item.id);
     if (isExist) {
       const newList = listInCart.filter(item => item.id !== isExist.id);
-      console.log(newList);
       setListInCart(newList);
       return;
     }

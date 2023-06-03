@@ -1,21 +1,22 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { TextField, Button, Stack, Box, Typography } from '@mui/material';
 import { Grid } from '@mui/material';
 import { FormWrapper } from './UserForm.styled';
-import { useState } from 'react';
 
 const UserForm = ({ handleOrderButton }) => {
-  const [user, setUser] = useState(null);
-
-  const handleRegistration = e => {
+  const handleOrder = e => {
     e.preventDefault();
     const form = e.currentTarget;
-    setUser({
+    toast.success(
+      `Thanks ${form.elements.name.value} for order! The best meal for you will be delivered as soon as possible`
+    );
+    handleOrderButton({
       name: form.elements.name.value,
       address: form.elements.address.value,
       phone: form.elements.phone.value,
       city: form.elements.city.value,
     });
-    handleOrderButton(user);
     form.reset();
   };
   return (
@@ -25,7 +26,7 @@ const UserForm = ({ handleOrderButton }) => {
       </Typography>
       <Grid container spacing={2}>
         <Stack
-          onSubmit={handleRegistration}
+          onSubmit={handleOrder}
           component="form"
           sx={{
             width: '30ch',
@@ -92,6 +93,7 @@ const UserForm = ({ handleOrderButton }) => {
           </Box>
         </Stack>
       </Grid>
+      <ToastContainer />
     </FormWrapper>
   );
 };

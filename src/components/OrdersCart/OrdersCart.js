@@ -1,38 +1,27 @@
 import { useState, useEffect } from 'react';
-import { OrdersWrapper, EmptyMsg, TitleMsg } from './OrdersCart.styled';
+import { OrdersWrapper, EmptyMsg } from './OrdersCart.styled';
 import OrderItem from '../OrderItem/OrderItem';
 import empty from './amptyImg.png';
 
 const OrdersCart = ({ user }) => {
   const [totalPrice, setTotalPrice] = useState(0);
-  // const savedOrders = JSON.parse(localStorage.getItem('orders'));
   const [ordersList, setOrdersList] = useState(
     JSON.parse(localStorage.getItem('orders')) || []
   );
-  const [newOrder, setNewOrder] = useState();
 
   useEffect(() => {
-    if (user && Object.keys(user).length !== 0) {
-      console.log('here');
-      setNewOrder([...ordersList, user]);
-      setOrdersList([]);
-      localStorage.clear();
-      setTotalPrice(0);
-    }
     ordersList.map(item => {
       return setTotalPrice(totalPrice => totalPrice + Number(item.price));
     });
-    console.log(ordersList);
-  }, []);
-  // useEffect(() => {
-  //   console.log(user);
-  //   if (user) {
-  //     console.log(user);
-  //     setNewOrder([...ordersList, user]);
-  //     setOrdersList([]);
-  //     localStorage.clear();
-  //   }
-  // }, [user]);
+  }, [ordersList]);
+
+  useEffect(() => {
+    if (user && Object.keys(user).length !== 0) {
+      setOrdersList([]);
+      setTotalPrice(0);
+      localStorage.clear();
+    }
+  }, [user]);
 
   const handleButtonClick = item => {
     const newOrdersList = ordersList.filter(meal => meal.id !== item.id);

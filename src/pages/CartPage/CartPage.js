@@ -7,7 +7,6 @@ const CartPage = () => {
   const [user, setUser] = useState({});
   const handleOrderButton = user => {
     setUser(user);
-    localStorage.clear();
   };
 
   return (
