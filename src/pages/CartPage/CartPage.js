@@ -9,9 +9,7 @@ const CartPage = () => {
     setUser(user);
     localStorage.clear();
   };
-  // const savedOrders = JSON.parse(localStorage.getItem('orders'));
-  // const [orders, setOrders] = useState(savedOrders ? savedOrders : []);
-  // console.log(savedOrders);
+
   return (
     <Container>
       <UserForm handleOrderButton={handleOrderButton} />

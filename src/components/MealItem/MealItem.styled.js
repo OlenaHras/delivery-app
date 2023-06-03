@@ -6,6 +6,7 @@ export const CardWrapper = styled.div`
   justify-content: space-between;
   border: 2px solid grey;
   border-radius: 25px;
+  background-color: #ffffff;
   align-items: center;
   padding: 25px;
   width: 180px;

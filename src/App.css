@@ -1,13 +1,12 @@
 .App {
   text-align: center;
+  /* width: 100%; */
   /* background-image: url('./bgImage.jpg'); */
-  /* opacity: 0.6; */
+  /* background-color: 'rgba(52, 52, 52, 0.8)'; */
+  background-repeat: no-repeat;
+  background-size:cover;
 }
-/* .App::after{
-  content: '';
-  background-image: url('./bgImage.jpg');
-  opacity: 0.6;
-} */
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

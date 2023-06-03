@@ -24,9 +24,6 @@ const OrderItem = ({ item, handleButtonClick, handleTotalCount }) => {
     }
     handleTotalCount(Number(-item.price));
   };
-  // let handleChange = e => {
-  //   setCount(e.target.value);
-  // };
 
   return (
     <CardWrapper>

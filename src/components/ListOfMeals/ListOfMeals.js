@@ -15,13 +15,9 @@ const ListOfMeals = ({ shop, handleChoosedShop }) => {
   const handleButtonClick = item => {
     const isExist = listInCart.find(meal => meal.id === item.id);
     if (isExist) {
-      // console.log(isExist);
       const newList = listInCart.filter(item => item.id !== isExist.id);
       console.log(newList);
       setListInCart(newList);
-      // setListInCart(prevState => {
-      //   return [...prevState, item];
-      // });
       return;
     }
     setListInCart(prevState => {

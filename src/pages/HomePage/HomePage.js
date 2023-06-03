@@ -7,7 +7,6 @@ import { Container } from './HomePage.styled';
 import ListOfMeals from '../../components/ListOfMeals/ListOfMeals';
 
 const HomePage = () => {
-  // const savedOrders = JSON.parse(localStorage.getItem('orders'));
   const [shopsList, setShopsList] = useState([]);
   const [list, setList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -34,17 +33,6 @@ const HomePage = () => {
     });
   };
 
-  // const handleChoosedShop = id => {
-  //   const result = shopsList.map(item => {
-  //     console.log(item);
-  //     return item.id === id ? item : null;
-  //     // if (item.id === id) {
-  //     //   console.log(shopsList);
-  //     //     return setShopsList(item);
-  //     // }
-  //   });
-  //   setShopsList(result);
-  // };
   return (
     <>
       {isLoading && <Spinner />}
@@ -61,7 +49,6 @@ const HomePage = () => {
             shop={list}
             handleChoosedShop={id => setChoosedShop(id)}
           />
-          {/* <Outlet /> */}
         </Container>
       )}
     </>

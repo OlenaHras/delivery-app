@@ -1,7 +1,3 @@
-// import { useEffect, useState } from 'react';
-
-// import useDeliveryService from '../../services/DeliveryService';
-// import Spinner from '../Spinner/Spinner';
 import ShopButton from '../ShopButton/ShopButton';
 import { Container } from './Sidebar.styled';
 

@@ -6,7 +6,7 @@ export const Container = styled.div`
   gap: 25px;
   margin: 0 auto;
   padding-left: 25px;
-  /* grid-template-columns: 1 2; */
+  height: fit-content;
 `;
 export const CardWrapper = styled.div`
   display: flex;

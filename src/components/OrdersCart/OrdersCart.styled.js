@@ -6,14 +6,16 @@ export const OrdersWrapper = styled.div`
   justify-content: center;
   gap: 25px;
   margin: 0 auto;
-  /* border-radius: 25px; */
-  /* border: 2px solid grey; */
-  /* margin-left: 100px; */
+  height: fit-content;
   padding: 25px;
   width: 80%;
   text-transform: uppercase;
-  /* height: 400px; */
 `;
 export const EmptyMsg = styled.div`
   flex-direction: column;
+`;
+
+export const TitleMsg = styled.p`
+  color: #fff;
+  font-size: 20px;
 `;

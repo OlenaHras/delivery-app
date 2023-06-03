@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom';
 
 import { Header } from './AppBar.styled';
 import logo from './logo.png';
-// import logo from '../../assets/images/Logo.png';
 const AppBar = () => {
   return (
     <Header>

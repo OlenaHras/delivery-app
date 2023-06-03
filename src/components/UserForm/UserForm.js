@@ -4,7 +4,7 @@ import { FormWrapper } from './UserForm.styled';
 import { useState } from 'react';
 
 const UserForm = ({ handleOrderButton }) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
 
   const handleRegistration = e => {
     e.preventDefault();
