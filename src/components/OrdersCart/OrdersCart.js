@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import useDeliveryService from '../../services/DeliveryService';
 import { OrdersWrapper, EmptyMsg } from './OrdersCart.styled';
 import OrderItem from '../OrderItem/OrderItem';
 import empty from './amptyImg.png';
@@ -9,6 +10,7 @@ const OrdersCart = ({ user }) => {
     JSON.parse(localStorage.getItem('orders')) || []
   );
 
+  const { addOrder } = useDeliveryService();
   useEffect(() => {
     ordersList.map(item => {
       return setTotalPrice(totalPrice => totalPrice + Number(item.price));
@@ -17,10 +19,14 @@ const OrdersCart = ({ user }) => {
 
   useEffect(() => {
     if (user && Object.keys(user).length !== 0) {
+      addOrder({ user, ordersList }).then(data => {
+        console.log(data);
+      });
       setOrdersList([]);
       setTotalPrice(0);
       localStorage.clear();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   const handleButtonClick = item => {
